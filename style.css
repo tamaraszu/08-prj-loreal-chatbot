@@ -55,6 +55,8 @@ body {
 }
 
 .chat-window {
+  display: flex;
+  flex-direction: column;
   height: 360px;
   border: 1px solid var(--loreal-black);
   padding: 20px;
@@ -62,21 +64,58 @@ body {
   line-height: 1.5;
   overflow-y: auto;
   background: #fafafa;
-  white-space: pre-line;
 }
 
 /* messages */
 .msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
   margin-bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 16px;
   line-height: 1.5;
+  word-wrap: break-word;
 }
 
+.msg-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+
+.msg-content {
+  font-size: 16px;
+}
+
+/* user bubble: right-aligned, black fill */
 .msg.user {
-  color: var(--loreal-black);
+  align-self: flex-end;
+  margin-left: auto;
+  background: var(--loreal-black);
+  color: var(--loreal-white);
+  border-bottom-right-radius: 4px;
 }
 
+.msg.user .msg-label {
+  color: var(--loreal-white);
+}
+
+/* assistant bubble: left-aligned, light fill with red accent label */
 .msg.ai {
+  align-self: flex-start;
+  margin-right: auto;
+  background: #f0f0f0;
+  color: var(--loreal-black);
+  border-bottom-left-radius: 4px;
+}
+
+.msg.ai .msg-label {
   color: var(--loreal-red);
+  opacity: 1;
 }
 
 /* input row */
