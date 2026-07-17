@@ -6,6 +6,8 @@ const chatWindow = document.getElementById("chatWindow");
 // Set initial message
 chatWindow.textContent = "👋 Hello! How can I help you today?";
 
+const workerUrl = 'https://lorealbot.tamiszuchet.workers.dev/';
+
 /* Handle form submit */
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault();

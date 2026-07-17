@@ -1,3 +1,12 @@
+/* —— brand variables —— */
+:root {
+  --loreal-black: #000000;
+  --loreal-white: #ffffff;
+  --loreal-red: #e3000f;
+  --loreal-gold: #c09853;
+  --loreal-grey: #666666;
+}
+
 /* —— basic reset —— */
 * {
   box-sizing: border-box;
@@ -8,9 +17,10 @@
 /* —— body + fonts —— */
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  color: var(--loreal-black);
   display: flex;
   justify-content: center;
+  background: var(--loreal-white);
 }
 
 .page-wrapper {
@@ -24,10 +34,19 @@ body {
   padding-top: 50px;
 }
 
+.site-logo {
+  height: auto;
+  width: 200px;
+  max-width: 60%;
+  margin-bottom: 16px;
+}
+
 .site-title {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   margin-bottom: 10px;
+  color: var(--loreal-black);
 }
 
 /* chat window */
@@ -37,7 +56,7 @@ body {
 
 .chat-window {
   height: 360px;
-  border: 1px solid #000;
+  border: 1px solid var(--loreal-black);
   padding: 20px;
   font-size: 18px;
   line-height: 1.5;
@@ -53,11 +72,11 @@ body {
 }
 
 .msg.user {
-  color: #000;
+  color: var(--loreal-black);
 }
 
 .msg.ai {
-  color: #666666;
+  color: var(--loreal-red);
 }
 
 /* input row */
@@ -75,14 +94,14 @@ body {
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid var(--loreal-red);
   outline-offset: 2px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
-  color: #fff;
+  background: var(--loreal-black);
+  color: var(--loreal-white);
   border: none;
   padding: 12px;
   width: 48px;
@@ -99,11 +118,11 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: var(--loreal-red);
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid var(--loreal-red);
   outline-offset: 2px;
 }
 
@@ -125,7 +144,7 @@ body {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: var(--loreal-grey);
 }
 
 .site-footer nav {
@@ -134,10 +153,10 @@ body {
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  color: var(--loreal-black);
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: var(--loreal-red);
 }
